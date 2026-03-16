@@ -1,0 +1,12 @@
+node_modules
+dist
+
+pnpm-lock.yaml
+
+# Editor directories and files
+.vscode/*
+.qoder/*
+
+auto-imports.d.ts
+components.d.ts
+typed-router.d.ts

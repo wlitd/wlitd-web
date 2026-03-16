@@ -1,0 +1,58 @@
+shellEmulator: true
+
+trustPolicy: no-downgrade
+
+trustPolicyExclude:
+  - semver
+
+catalogs:
+  animation:
+    motion-v: ^2.0.1
+
+  build:
+    vite: ^8.0.0
+
+  charts:
+    echarts: ^6.0.0
+    vue-echarts: ^8.0.1
+
+  css:
+    unocss: ^66.6.6
+
+  frontend:
+    pinia: ^3.0.4
+    vue: ^3.5.30
+    vue-i18n: ^11.3.0
+    vue-router: ^5.0.3
+
+  icons:
+    '@iconify-json/flag': ^1.2.11
+    '@iconify-json/icon-park-outline': ^1.2.4
+    '@iconify-json/line-md': ^1.2.16
+    '@iconify-json/lucide': ^1.2.98
+    '@iconify-json/mdi': ^1.2.3
+
+  lint:
+    '@antfu/eslint-config': ^7.7.2
+    eslint: ^10.0.3
+
+  plugins:
+    '@intlify/unplugin-vue-i18n': ^11.0.7
+    '@vitejs/plugin-vue': ^6.0.5
+    '@vitejs/plugin-vue-jsx': ^5.1.5
+    pinia-plugin-persistedstate: ^4.7.1
+    unplugin-auto-import: ^21.0.0
+    unplugin-vue-components: ^31.0.0
+
+  types:
+    '@types/node': ^25.5.0
+    '@vue/tsconfig': ^0.9.0
+    typescript: ^5.9.3
+
+  ui:
+    highlight.js: ^11.11.1
+    naive-ui: ^2.44.1
+
+  utils:
+    '@ctrl/tinycolor': ^4.2.0
+    '@vueuse/core': ^14.2.1

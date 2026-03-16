@@ -1,0 +1,45 @@
+{
+  "name": "wlitd-web",
+  "type": "module",
+  "version": "0.0.0",
+  "private": true,
+  "packageManager": "pnpm@10.32.1",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@ctrl/tinycolor": "catalog:utils",
+    "@vueuse/core": "catalog:utils",
+    "echarts": "catalog:charts",
+    "highlight.js": "catalog:ui",
+    "motion-v": "catalog:animation",
+    "pinia": "catalog:frontend",
+    "vue": "catalog:frontend",
+    "vue-echarts": "catalog:charts",
+    "vue-i18n": "catalog:frontend",
+    "vue-router": "catalog:frontend"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "catalog:lint",
+    "@iconify-json/flag": "catalog:icons",
+    "@iconify-json/icon-park-outline": "catalog:icons",
+    "@iconify-json/line-md": "catalog:icons",
+    "@iconify-json/lucide": "catalog:icons",
+    "@iconify-json/mdi": "catalog:icons",
+    "@intlify/unplugin-vue-i18n": "catalog:plugins",
+    "@types/node": "catalog:types",
+    "@vitejs/plugin-vue": "catalog:plugins",
+    "@vitejs/plugin-vue-jsx": "catalog:plugins",
+    "@vue/tsconfig": "catalog:types",
+    "eslint": "catalog:lint",
+    "naive-ui": "catalog:ui",
+    "pinia-plugin-persistedstate": "catalog:plugins",
+    "typescript": "catalog:types",
+    "unocss": "catalog:css",
+    "unplugin-auto-import": "catalog:plugins",
+    "unplugin-vue-components": "catalog:plugins",
+    "vite": "catalog:build"
+  }
+}
