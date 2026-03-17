@@ -2,7 +2,7 @@
 
 A Vue 3 application using Vite, TypeScript, and various modern frontend tools.
 
-**Preview:** [https://wlitd.com/web/](https://wlitd.com/web/){target="_blank"}
+**Preview:** [https://wlitd.com/web/](https://wlitd.com/web/)
 
 ## Dependency Management
 
