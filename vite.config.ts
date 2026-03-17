@@ -10,6 +10,9 @@ import { defineConfig } from 'vite'
 
 // https://vite.dev/config/
 export default defineConfig({
+  // 配置 Nginx 代理的基础路径
+  base: '/web/',
+
   resolve: {
     alias: {
       '@': path.resolve(__dirname, 'src')
