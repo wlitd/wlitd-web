@@ -2,6 +2,8 @@
 
 A Vue 3 application using Vite, TypeScript, and various modern frontend tools.
 
+**Preview:** https://wlitd.com/web/
+
 ## Dependency Management
 
 This project uses [taze](https://github.com/antfu-collective/taze#readme) to manage and update dependencies.
