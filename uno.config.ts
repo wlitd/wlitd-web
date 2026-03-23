@@ -9,7 +9,8 @@ export default defineConfig({
         'line-md': () => import('@iconify-json/line-md/icons.json').then(i => i.default),
         mdi: () => import('@iconify-json/mdi/icons.json').then(i => i.default),
         'icon-park-outline': () => import('@iconify-json/icon-park-outline/icons.json').then(i => i.default),
-        lucide: () => import('@iconify-json/lucide/icons.json').then(i => i.default)
+        lucide: () => import('@iconify-json/lucide/icons.json').then(i => i.default),
+        'streamline-ultimate': () => import('@iconify-json/streamline-ultimate/icons.json').then(i => i.default)
       }
     })
   ],
@@ -20,7 +21,8 @@ export default defineConfig({
     'i-icon-park-outline:home',
     'i-icon-park-outline:components',
     'i-icon-park-outline:system',
-    'i-icon-park-outline:user'
+    'i-icon-park-outline:user',
+    'i-mdi:cube-outline'
   ],
 
   rules: [

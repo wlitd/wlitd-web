@@ -28,6 +28,7 @@
     "@iconify-json/line-md": "catalog:icons",
     "@iconify-json/lucide": "catalog:icons",
     "@iconify-json/mdi": "catalog:icons",
+    "@iconify-json/streamline-ultimate": "catalog:icons",
     "@intlify/unplugin-vue-i18n": "catalog:plugins",
     "@types/node": "catalog:types",
     "@vitejs/plugin-vue": "catalog:plugins",
