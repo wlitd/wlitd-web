@@ -16,8 +16,7 @@ declare module 'vue-router' {
 }
 
 const router = createRouter({
-  // 配置 Nginx 代理的基础路径
-  history: createWebHistory('/web/'),
+  history: createWebHistory(getEnv('VITE_PUBLIC_PATH')),
   routes
 })
 
