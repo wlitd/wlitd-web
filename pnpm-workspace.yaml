@@ -7,7 +7,7 @@ trustPolicyExclude:
 
 catalogs:
   animation:
-    motion-v: ^2.0.1
+    motion-v: ^2.2.0
 
   build:
     vite: ^8.0.1
@@ -35,7 +35,7 @@ catalogs:
 
   lint:
     '@antfu/eslint-config': ^7.7.3
-    eslint: ^10.0.3
+    eslint: ^10.1.0
 
   plugins:
     '@intlify/unplugin-vue-i18n': ^11.0.7
