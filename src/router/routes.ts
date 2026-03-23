@@ -20,6 +20,19 @@ export const routes: RouteRecordRaw[] = [
         }
       },
       {
+        name: 'Profile',
+        path: 'profile',
+        component: () => import('@/pages/profile.vue'),
+        meta: {
+          titleKey: 'profile',
+          inMenu: false,
+          i18n: {
+            zh: '个人资料',
+            en: 'Profile'
+          }
+        }
+      },
+      {
         path: 'components',
         meta: {
           titleKey: 'components',
@@ -163,6 +176,32 @@ export const routes: RouteRecordRaw[] = [
               i18n: {
                 zh: '用户管理',
                 en: 'User Management'
+              }
+            }
+          }
+        ]
+      },
+      {
+        path: 'base',
+        meta: {
+          titleKey: 'base',
+          icon: 'i-mdi:cube-outline',
+          i18n: {
+            zh: '基础功能',
+            en: 'Base Function'
+          }
+        },
+        children: [
+          {
+            name: 'KeepAlive',
+            path: 'keepAlive',
+            component: () => import('@/pages/base/keepAlive.vue'),
+            meta: {
+              titleKey: 'keepAlive',
+              keepAlive: true,
+              i18n: {
+                zh: 'KeepAlive',
+                en: 'KeepAlive'
               }
             }
           }
