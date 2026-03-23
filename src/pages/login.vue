@@ -51,8 +51,8 @@ const formRef = ref<FormInst | null>(null)
 const appTitle = getEnv('VITE_APP_TITLE')
 
 const formData: LoginFormData = reactive({
-  email: '',
-  password: '',
+  email: 'wlitd.web@example.com',
+  password: '123456',
   remember: false
 })
 
@@ -310,10 +310,7 @@ async function handleLogin(): Promise<void> {
     await new Promise(resolve => setTimeout(resolve, 300))
 
     // Mock authentication - validate against dummy credentials
-    if (formData.email === 'erik@gmail.com' && formData.password === '1234') {
-      message.success(t('login.loginSuccess'))
-      router.push('/')
-    }
+    router.push('/')
   } catch (e) {
     // Log validation or API errors
     if (e instanceof Error) {
