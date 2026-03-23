@@ -11,6 +11,7 @@ const { toggleMenuCollapsed } = useGlobalStore()
     <div class="flex flex-col gap-y-3 h-full">
       <Brand />
       <SiderMenu />
+      <UserDropdown />
       <Copyright />
     </div>
   </NLayoutSider>
