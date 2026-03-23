@@ -49,8 +49,7 @@ export const useTabStore = defineStore('tab', () => {
    * @param route 路由对象
    */
   function addCachedView(route: RouteLocationNormalized): void {
-    const cacheName = `${String(route.name)}-${route.fullPath}`
-    cachedViews.value.add(cacheName)
+    cachedViews.value.add(route.name as string)
   }
 
   /**
@@ -58,8 +57,7 @@ export const useTabStore = defineStore('tab', () => {
    * @param tab 标签页对象
    */
   function removeCachedView(tab: TabItem): void {
-    const cacheName = `${tab.routeName}-${tab.fullPath}`
-    cachedViews.value.delete(cacheName)
+    cachedViews.value.delete(tab.routeName)
   }
 
   /**
