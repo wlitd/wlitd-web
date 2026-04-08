@@ -86,10 +86,7 @@ function openLink(url: string) {
               class="absolute -inset-1 rounded-full transition-all duration-300"
               :style="{ background: avatarBorderGradient }"
             />
-            <NAvatar
-              :src="Avatar" :size="140" round
-              class="relative z-10 border-4 border-white dark:border-gray-900"
-            />
+            <NAvatar :src="Avatar" :size="140" round class="relative z-10 border-4 border-white dark:border-gray-900" />
             <div
               class="absolute bottom-2 right-2 z-20 size-5 rounded-full bg-green-500 border-2 border-white dark:border-gray-800"
             />
@@ -159,10 +156,7 @@ function openLink(url: string) {
               class="flex flex-col items-center p-3 rounded-xl hover:shadow-md transition-all cursor-pointer"
               :style="{ backgroundColor: isDark ? 'rgba(255,255,255,0.03)' : 'rgba(0,0,0,0.02)' }"
             >
-              <div
-                class="size-10 rounded-xl flex-center mb-2"
-                :style="{ backgroundColor: `${stat.color}20` }"
-              >
+              <div class="size-10 rounded-xl flex-center mb-2" :style="{ backgroundColor: `${stat.color}20` }">
                 <div :class="stat.icon" class="size-5" :style="{ color: stat.color }" />
               </div>
               <span class="text-xl font-bold">{{ stat.value }}</span>
@@ -189,9 +183,8 @@ function openLink(url: string) {
                 <span class="text-gray-500">{{ skill.level }}%</span>
               </div>
               <NProgress
-                type="line" :percentage="skill.level" :show-indicator="false" :height="6"
-                :border-radius="3" :color="themeVars.primaryColor"
-                :rail-color="isDark ? 'rgba(255,255,255,0.1)' : 'rgba(0,0,0,0.08)'"
+                type="line" :percentage="skill.level" :show-indicator="false" :height="6" :border-radius="3"
+                :color="themeVars.primaryColor" :rail-color="isDark ? 'rgba(255,255,255,0.1)' : 'rgba(0,0,0,0.08)'"
               />
             </div>
           </div>
@@ -211,10 +204,7 @@ function openLink(url: string) {
               class="flex items-center gap-3 p-3 rounded-xl transition-colors cursor-pointer hover:bg-[var(--n-hover-color)]"
               :style="{ backgroundColor: isDark ? 'rgba(255,255,255,0.03)' : 'rgba(0,0,0,0.02)' }"
             >
-              <div
-                class="size-10 rounded-xl flex-center shrink-0"
-                :style="{ backgroundColor: `${activity.color}20` }"
-              >
+              <div class="size-10 rounded-xl flex-center shrink-0" :style="{ backgroundColor: `${activity.color}20` }">
                 <div :class="activity.icon" class="size-5" :style="{ color: activity.color }" />
               </div>
               <div class="flex-1 min-w-0">
@@ -238,45 +228,45 @@ function openLink(url: string) {
 
 <i18n lang="json">
 {
-    "zh": {
-        "bio": "何必低到尘埃里！",
-        "role": "超级管理员",
-        "editProfile": "编辑资料",
-        "joined": "加入于",
-        "skills": "技能",
-        "recentActivity": "最近活动",
-        "stats": {
-            "projects": "项目",
-            "contributions": "贡献",
-            "followers": "关注者",
-            "stars": "获赞"
-        },
-        "activity": {
-            "createdProject": "创建了项目",
-            "committed": "提交代码到",
-            "openedIssue": "在",
-            "starred": "收藏了项目"
-        }
+  "zh": {
+    "bio": "何必低到尘埃里！",
+    "role": "超级管理员",
+    "editProfile": "编辑资料",
+    "joined": "加入于",
+    "skills": "技能",
+    "recentActivity": "最近活动",
+    "stats": {
+      "projects": "项目",
+      "contributions": "贡献",
+      "followers": "关注者",
+      "stars": "获赞"
     },
-    "en": {
-        "bio": "Why low in the dust!",
-        "role": "Super Administrator",
-        "editProfile": "Edit Profile",
-        "joined": "Joined",
-        "skills": "Skills",
-        "recentActivity": "Recent Activity",
-        "stats": {
-            "projects": "Projects",
-            "contributions": "Contributions",
-            "followers": "Followers",
-            "stars": "Stars"
-        },
-        "activity": {
-            "createdProject": "Created project",
-            "committed": "Committed to",
-            "openedIssue": "Opened issue in",
-            "starred": "Starred"
-        }
+    "activity": {
+      "createdProject": "创建了项目",
+      "committed": "提交代码到",
+      "openedIssue": "在",
+      "starred": "收藏了项目"
     }
+  },
+  "en": {
+    "bio": "Why low in the dust!",
+    "role": "Super Administrator",
+    "editProfile": "Edit Profile",
+    "joined": "Joined",
+    "skills": "Skills",
+    "recentActivity": "Recent Activity",
+    "stats": {
+      "projects": "Projects",
+      "contributions": "Contributions",
+      "followers": "Followers",
+      "stars": "Stars"
+    },
+    "activity": {
+      "createdProject": "Created project",
+      "committed": "Committed to",
+      "openedIssue": "Opened issue in",
+      "starred": "Starred"
+    }
+  }
 }
 </i18n>
