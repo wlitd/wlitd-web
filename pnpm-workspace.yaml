@@ -10,7 +10,7 @@ catalogs:
     motion-v: ^2.2.0
 
   build:
-    vite: ^8.0.3
+    vite: ^8.0.7
 
   charts:
     echarts: ^6.0.0
@@ -22,7 +22,7 @@ catalogs:
   frontend:
     pinia: ^3.0.4
     vue: ^3.5.32
-    vue-i18n: ^11.3.0
+    vue-i18n: ^11.3.1
     vue-router: ^5.0.4
 
   icons:
@@ -35,7 +35,7 @@ catalogs:
 
   lint:
     '@antfu/eslint-config': ^8.0.0
-    eslint: ^10.1.0
+    eslint: ^10.2.0
 
   plugins:
     '@intlify/unplugin-vue-i18n': ^11.0.7
@@ -46,13 +46,14 @@ catalogs:
     unplugin-vue-components: ^32.0.0
 
   types:
-    '@types/node': ^25.5.0
+    '@types/node': ^25.5.2
     '@vue/tsconfig': ^0.9.1
     typescript: ^6.0.2
 
   ui:
     highlight.js: ^11.11.1
     naive-ui: ^2.44.1
+    vue-draggable-plus: ^0.6.1
 
   utils:
     '@ctrl/tinycolor': ^4.2.0

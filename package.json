@@ -17,6 +17,7 @@
     "motion-v": "catalog:animation",
     "pinia": "catalog:frontend",
     "vue": "catalog:frontend",
+    "vue-draggable-plus": "catalog:ui",
     "vue-echarts": "catalog:charts",
     "vue-i18n": "catalog:frontend",
     "vue-router": "catalog:frontend"
