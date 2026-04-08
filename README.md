@@ -256,6 +256,37 @@ A floating action button with expandable menu items.
 </template>
 ```
 
+### Dock
+
+A macOS-style dock component with magnification effect and frosted glass background.
+
+**Features:**
+- Four positions: top, bottom, left, right
+- Magnification effect on hover (like macOS dock)
+- Frosted glass background with light/dark mode support
+- Tooltip support via Naive UI Popover props
+- Icon render function support (like Naive UI)
+- Multiple sizes
+
+**Usage:**
+```vue
+<script setup lang="ts">
+import type { DockItem } from '@/components/ui/dock/types'
+
+const dockItems: DockItem[] = [
+  { key: 'home', icon: () => h('div', { class: 'i-mdi:home' }), label: 'Home' },
+  { key: 'search', icon: () => h('div', { class: 'i-mdi:magnify' }), label: 'Search' },
+  { key: 'settings', icon: () => h('div', { class: 'i-mdi:cog' }), label: 'Settings' }
+]
+</script>
+
+<template>
+  <div class="relative w-full h-40">
+    <Dock :items="dockItems" position="bottom" />
+  </div>
+</template>
+```
+
 ### Conversations
 
 A conversation list component with grouping support.
@@ -330,6 +361,7 @@ src/
 │   └── ui/             # UI components
 │       ├── component-demo/
 │       ├── conversations/
+│       ├── dock/
 │       ├── fieldset/
 │       ├── float-input/
 │       ├── org-chart/
