@@ -1,7 +1,7 @@
-import type { Size } from 'naive-ui/es/button/src/interface'
+import type { ButtonSize } from 'naive-ui'
 
 export interface FieldsetProps {
-  size?: Size
+  size?: ButtonSize
   legend?: string
   toggleable?: boolean
 }
