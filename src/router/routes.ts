@@ -125,6 +125,18 @@ export const routes: RouteRecordRaw[] = [
                     en: 'Conversations'
                   }
                 }
+              },
+              {
+                name: 'Dock',
+                path: 'dock',
+                component: () => import('@/pages/components/base/dockDemo.vue'),
+                meta: {
+                  titleKey: 'dock',
+                  i18n: {
+                    zh: 'Dock 导航栏',
+                    en: 'Dock'
+                  }
+                }
               }
             ]
           },
