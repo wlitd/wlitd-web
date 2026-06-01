@@ -228,7 +228,7 @@ const collapsibleData: OrgChartNode[] = [
 const slotsData: OrgChartNode[] = [
   {
     key: '0',
-    label: 'Dong Ming Rui',
+    label: 'Zhou Ming Rui',
     icon: 'i-flag:cn-4x3',
     description: 'CEO',
     children: [
@@ -277,7 +277,7 @@ import { OrgChart } from '@/components/ui/org-chart'
 const slotsData: OrgChartNode[] = [
   {
     key: '0',
-    label: 'Dong Ming Rui',
+    label: 'Zhou Ming Rui',
     icon: 'i-flag:cn-4x3',
     description: 'CEO',
     children: [
