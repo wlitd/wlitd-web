@@ -19,6 +19,15 @@ const PRESET_COLORS = [
 export const builtInThemeColor = [...PRESET_COLORS]
 
 /**
+ * 基础主题覆盖样式
+ */
+const BASE_THEME_OVERRIDES: GlobalThemeOverrides = {
+  common: {
+    borderRadius: '6px'
+  }
+}
+
+/**
  * 根据主色调生成动态主题覆盖样式
  * @param primaryColor 主题颜色
  * @returns 主题覆盖配置对象
@@ -32,6 +41,7 @@ const generateDynamicThemeOverride = (primaryColor: string): GlobalThemeOverride
 
   return {
     common: {
+      ...BASE_THEME_OVERRIDES.common,
       primaryColor: tc.toHexString(),
       primaryColorHover: tc.clone().lighten(10).toHexString(),
       primaryColorPressed: tc.clone().darken(15).toHexString(),
