@@ -66,7 +66,10 @@ function handleClick(conv: Conversation): void {
 </script>
 
 <template>
-  <div class="w-full" :style="{ backgroundColor: themeVars.bodyColor }">
+  <div
+    class="w-full"
+    :style="{ 'backgroundColor': themeVars.bodyColor, '--icon-hover-color': themeVars.closeColorHover }"
+  >
     <div v-if="!groupable" class="flex flex-col gap-3">
       <NSpin v-for="conv in items" :key="conv.key" :show="conv.loading === true" size="small">
         <div
@@ -86,9 +89,14 @@ function handleClick(conv: Conversation): void {
               v-if="menu" trigger="click" placement="bottom-start" v-bind="dropdownProps"
               :options="menu(conv).options"
             >
-              <slot name="menuIcon">
-                <div class="i-lucide:ellipsis flex-shrink-0" />
-              </slot>
+              <div
+                class="flex-shrink-0 p-1 transition-colors hover:bg-[var(--icon-hover-color)]"
+                :style="{ borderRadius: themeVars.borderRadius }" @click.stop
+              >
+                <slot name="menuIcon">
+                  <div class="i-lucide:ellipsis" />
+                </slot>
+              </div>
             </NDropdown>
           </div>
         </div>
@@ -125,9 +133,14 @@ function handleClick(conv: Conversation): void {
                   v-if="menu" trigger="click" placement="bottom-start" v-bind="dropdownProps"
                   :options="menu(conv).options"
                 >
-                  <slot name="menuIcon">
-                    <div class="i-lucide:ellipsis flex-shrink-0" />
-                  </slot>
+                  <div
+                    class="flex-shrink-0 p-1 transition-colors hover:bg-[var(--icon-hover-color)]"
+                    :style="{ borderRadius: themeVars.borderRadius }" @click.stop
+                  >
+                    <slot name="menuIcon">
+                      <div class="i-lucide:ellipsis" />
+                    </slot>
+                  </div>
                 </NDropdown>
               </div>
             </div>
