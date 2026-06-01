@@ -44,13 +44,13 @@ export const routes: RouteRecordRaw[] = [
         },
         children: [
           {
-            path: 'base',
+            path: 'common',
             meta: {
-              titleKey: 'base',
+              titleKey: 'common',
               group: true,
               i18n: {
-                zh: '基础组件',
-                en: 'Base Component'
+                zh: '通用组件',
+                en: 'Common Component'
               }
             },
             children: [
