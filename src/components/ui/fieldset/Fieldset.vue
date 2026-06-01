@@ -41,14 +41,12 @@ defineExpose({ toggleExpand })
   >
     <legend>
       <slot name="legend">
-        <div v-if="!toggleable" :style="legendStyle">{{ legend }}</div>
+        <span v-if="!toggleable" :style="legendStyle">{{ legend }}</span>
 
-        <RippleButton v-else :size="size" quaternary @click="toggleExpand">
-          <template #icon>
-            <div :class="[expand ? 'i-mdi:minus' : 'i-mdi:plus']" />
-          </template>
-          <span>{{ legend }}</span>
-        </RippleButton>
+        <button v-else v-ripple type="button" class="fieldset-toggle-btn" :style="legendStyle" @click="toggleExpand">
+          <span :class="[expand ? 'i-mdi:minus' : 'i-mdi:plus']" />
+          <span class="fieldset-legend-text">{{ legend }}</span>
+        </button>
       </slot>
     </legend>
 
@@ -64,3 +62,30 @@ defineExpose({ toggleExpand })
     </div>
   </fieldset>
 </template>
+
+<style scoped>
+.fieldset-toggle-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0 0.5rem;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  color: inherit;
+  font-weight: inherit;
+  font-size: inherit;
+  border-radius: v-bind('themeVars.borderRadius');
+  transition:
+    background-color 0.2s,
+    color 0.2s;
+}
+
+.fieldset-toggle-btn:hover {
+  background-color: v-bind('themeVars.hoverColor');
+}
+
+.fieldset-toggle-btn:active {
+  background-color: v-bind('themeVars.pressedColor');
+}
+</style>
