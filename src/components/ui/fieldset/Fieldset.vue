@@ -63,7 +63,7 @@ defineExpose({ toggleExpand })
   </fieldset>
 </template>
 
-<style scoped>
+<style lang="css" scoped>
 .fieldset-toggle-btn {
   display: inline-flex;
   align-items: center;
