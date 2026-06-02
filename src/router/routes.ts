@@ -162,6 +162,18 @@ export const routes: RouteRecordRaw[] = [
                     en: 'Float Input'
                   }
                 }
+              },
+              {
+                name: 'FloatInputNumber',
+                path: 'floatInputNumber',
+                component: () => import('@/pages/components/input/floatInputNumberDemo.vue'),
+                meta: {
+                  titleKey: 'floatInputNumber',
+                  i18n: {
+                    zh: '浮标数字框',
+                    en: 'Float Input Number'
+                  }
+                }
               }
             ]
           }
