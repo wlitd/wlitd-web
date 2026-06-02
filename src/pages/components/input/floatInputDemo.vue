@@ -57,15 +57,15 @@ const slotsCode = `
       </template>
     </FloatInput>
     <FloatInput placeholder="ClearIcon" clearable>
-      <template #clearIcon>
+      <template #clear-icon>
         <div class="i-mdi:delete" />
       </template>
     </FloatInput>
     <FloatInput placeholder="Password" type="password" show-password-on="click">
-      <template #passwordVisibleIcon>
+      <template #password-visible-icon>
         <div class="i-mdi:eye" />
       </template>
-      <template #passwordInvisibleIcon>
+      <template #password-invisible-icon>
         <div class="i-mdi:eye-off" />
       </template>
     </FloatInput>
@@ -306,15 +306,15 @@ function handleSubmit(): void {
             </template>
           </FloatInput>
           <FloatInput placeholder="ClearIcon" clearable>
-            <template #clearIcon>
+            <template #clear-icon>
               <div class="i-mdi:delete" />
             </template>
           </FloatInput>
           <FloatInput type="password" placeholder="Password" show-password-on="click">
-            <template #passwordVisibleIcon>
+            <template #password-visible-icon>
               <div class="i-mdi:eye" />
             </template>
-            <template #passwordInvisibleIcon>
+            <template #password-invisible-icon>
               <div class="i-mdi:eye-off" />
             </template>
           </FloatInput>

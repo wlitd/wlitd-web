@@ -36,10 +36,10 @@ All events are inherited from Naive UI's input component.
 |------|-------------|
 | prefix | Content placed before the input field |
 | suffix | Content placed after the input field |
-| clearIcon | Custom clear icon |
+| clear-icon | Custom clear icon |
 | count | Custom count display (receives `{ value: string }` slot props) |
-| passwordVisibleIcon | Custom password visible icon |
-| passwordInvisibleIcon | Custom password invisible icon |
+| password-visible-icon | Custom password visible icon |
+| password-invisible-icon | Custom password invisible icon |
 | default | The input content (rarely used) |
 
 > **Note:** The examples use UnoCSS icons (e.g., `i-mdi:lock`) which are automatically transformed into icon elements. You can use any icon component or SVG in the prefix slot.
@@ -135,15 +135,15 @@ function handleSubmit(): void {
       </template>
     </FloatInput>
     <FloatInput placeholder="ClearIcon" clearable>
-      <template #clearIcon>
+      <template #clear-icon>
         <div class="i-mdi:delete" />
       </template>
     </FloatInput>
     <FloatInput placeholder="Password" type="password" show-password-on="click">
-      <template #passwordVisibleIcon>
+      <template #password-visible-icon>
         <div class="i-mdi:eye" />
       </template>
-      <template #passwordInvisibleIcon>
+      <template #password-invisible-icon>
         <div class="i-mdi:eye-off" />
       </template>
     </FloatInput>

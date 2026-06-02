@@ -26,10 +26,10 @@ const emit = defineEmits<{
 
 const slots = defineSlots<{
   prefix?: () => any
-  clearIcon?: () => any
+  'clear-icon'?: () => any
   count?: (props: { value: string }) => any
-  passwordInvisibleIcon?: () => any
-  passwordVisibleIcon?: () => any
+  'password-invisible-icon'?: () => any
+  'password-visible-icon'?: () => any
   suffix?: () => any
 }>()
 
@@ -144,16 +144,16 @@ defineExpose({
         </div>
       </template>
       <template #clear-icon>
-        <slot name="clearIcon" />
+        <slot name="clear-icon" />
       </template>
       <template #count="{ value: inputStr }">
         <slot name="count" :value="inputStr" />
       </template>
       <template #password-invisible-icon>
-        <slot name="passwordInvisibleIcon" />
+        <slot name="password-invisible-icon" />
       </template>
       <template #password-visible-icon>
-        <slot name="passwordVisibleIcon" />
+        <slot name="password-visible-icon" />
       </template>
       <template #suffix>
         <slot name="suffix" />
