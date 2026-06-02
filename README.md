@@ -189,12 +189,11 @@ An input component with floating label animation.
 - Floating label that animates when focused or has value
 - Support for text and textarea types
 - Form integration (inherits size, disabled, and validation status)
-- Prefix and suffix slots
-- Clear icon slot
-- Password visibility toggle slots
+- Prefix, suffix, clear icon, and password visibility toggle slots
 - Character count slot
 - Validation status display (warning, error)
 - Multiple sizes
+- Long label truncation with ellipsis
 
 **Usage:**
 ```vue
@@ -208,6 +207,45 @@ An input component with floating label animation.
       <div class="i-mdi:search" />
     </template>
   </FloatInput>
+</template>
+```
+
+### FloatInputNumber
+
+An input number component with floating label animation.
+
+**Features:**
+- Floating label that animates when focused or has value
+- Inherits all properties from Naive UI's InputNumber
+- Custom increment/decrement button slots
+- Custom parse and format functions (e.g., thousand separators)
+- Prefix and suffix slots
+- Form integration
+- Multiple sizes
+- Long label truncation with ellipsis
+
+**Usage:**
+```vue
+<script setup lang="ts">
+import { ref } from 'vue'
+
+const value = ref<number>(0)
+</script>
+
+<template>
+  <FloatInputNumber v-model:value="value" placeholder="Please Input Number" />
+
+  <FloatInputNumber placeholder="Custom Buttons" button-placement="both">
+    <template #prefix>
+      <span>￥</span>
+    </template>
+    <template #minus-icon>
+      <div class="i-mdi:arrow-down-bold" />
+    </template>
+    <template #add-icon>
+      <div class="i-mdi:arrow-up-bold" />
+    </template>
+  </FloatInputNumber>
 </template>
 ```
 
@@ -364,6 +402,7 @@ src/
 │       ├── dock/
 │       ├── fieldset/
 │       ├── float-input/
+│       ├── float-input-number/
 │       ├── org-chart/
 │       ├── ripple-button/
 │       ├── segmented/
