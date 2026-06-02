@@ -173,6 +173,11 @@ defineExpose({
   font-size: var(--float-input-label-font-size);
   color: var(--float-input-label-color);
   left: var(--float-input-label-initial-left);
+  /* 防止 label 过长被 suffix 和按钮遮挡 */
+  max-width: calc(100% - var(--float-input-label-left) - 44px);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .float-input__label--input {

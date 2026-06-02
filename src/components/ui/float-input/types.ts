@@ -1,11 +1,10 @@
-import type { FormValidationStatus, InputProps } from 'naive-ui'
-import type { Size } from 'naive-ui/es/input/src/interface'
+import type { FormValidationStatus, InputProps, InputSize } from 'naive-ui'
 
 export interface FloatInputProps extends /* @vue-ignore */ InputProps {
   placeholder: string
   pair?: boolean
   type?: 'text' | 'password' | 'textarea'
-  size?: Size
+  size?: InputSize
   defaultValue?: string
   status?: FormValidationStatus
   disabled?: boolean
