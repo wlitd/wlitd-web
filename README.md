@@ -249,6 +249,48 @@ const value = ref<number>(0)
 </template>
 ```
 
+### FloatDatePicker
+
+A date picker component with floating label animation.
+
+**Features:**
+- Floating label that animates when focused or has value
+- Inherits all properties from Naive UI's DatePicker
+- Multiple picker types: date, datetime, month, year, quarter, week
+- Custom date format configuration
+- Scoped slots for clear, now, and confirm buttons
+- Custom navigation icon slots
+- Form integration (inherits size, disabled, and validation status)
+- Multiple sizes (small, medium, large)
+- Long label truncation with ellipsis
+- Theme-aware styling
+
+**Usage:**
+```vue
+<script setup lang="ts">
+import { ref } from 'vue'
+
+const dateValue = ref<number | null>(1780329600000)
+</script>
+
+<template>
+  <FloatDatePicker v-model:value="dateValue" placeholder="Please Select Date" />
+
+  <FloatDatePicker
+    v-model:value="dateValue"
+    type="month"
+    format="y年 M月"
+    year-format="y年"
+    month-format="M月"
+    placeholder="Month with Format"
+  >
+    <template #date-icon>
+      <div class="i-mdi-calendar-clock" />
+    </template>
+  </FloatDatePicker>
+</template>
+```
+
 ### Fieldset
 
 A fieldset component with optional collapsible functionality.
@@ -401,6 +443,7 @@ src/
 │       ├── conversations/
 │       ├── dock/
 │       ├── fieldset/
+│       ├── float-date-picker/
 │       ├── float-input/
 │       ├── float-input-number/
 │       ├── org-chart/
