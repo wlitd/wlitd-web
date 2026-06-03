@@ -174,6 +174,18 @@ export const routes: RouteRecordRaw[] = [
                     en: 'Float Input Number'
                   }
                 }
+              },
+              {
+                name: 'FloatDatePicker',
+                path: 'floatDatePicker',
+                component: () => import('@/pages/components/input/floatDatePickerDemo.vue'),
+                meta: {
+                  titleKey: 'floatDatePicker',
+                  i18n: {
+                    zh: '浮标日期选择器',
+                    en: 'Float Date Picker'
+                  }
+                }
               }
             ]
           }
