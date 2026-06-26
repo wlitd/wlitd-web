@@ -652,11 +652,11 @@ function handleEmailBlur(): void {
               <template #prefix>
                 <div class="i-lucide:lock" />
               </template>
-              <template #passwordVisibleIcon>
-                <div class="i-lucide:eye" @click="showPassword = false" />
+              <template #password-visible-icon>
+                <div class="i-lucide:eye" @mousedown="showPassword = false" />
               </template>
-              <template #passwordInvisibleIcon>
-                <div class="i-lucide:eye-off" @click="showPassword = true" />
+              <template #password-invisible-icon>
+                <div class="i-lucide:eye-off" @mousedown="showPassword = true" />
               </template>
             </FloatInput>
           </NFormItem>
