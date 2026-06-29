@@ -1,11 +1,9 @@
 import type { App } from 'vue'
 
-import { MotionPlugin } from 'motion-v'
-
 import pinia from '@/stores'
 import i18n from './locale'
 
-const pluginList = [pinia, router, i18n, MotionPlugin]
+const pluginList = [pinia, router, i18n]
 const directiveList = [{ name: 'ripple', directive: ripple }]
 
 const plugins = {
