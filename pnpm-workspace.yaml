@@ -17,11 +17,11 @@ catalogs:
     vue-echarts: ^8.0.1
 
   css:
-    unocss: ^66.7.2
+    unocss: ^66.7.3
 
   frontend:
     pinia: ^3.0.4
-    vue: ^3.5.38
+    vue: ^3.5.39
     vue-i18n: ^11.4.6
     vue-router: ^5.1.0
 
@@ -35,7 +35,7 @@ catalogs:
 
   lint:
     '@antfu/eslint-config': ^9.1.0
-    eslint: ^10.5.0
+    eslint: ^10.6.0
 
   plugins:
     '@intlify/unplugin-vue-i18n': ^11.2.4
