@@ -6,9 +6,6 @@ trustPolicyExclude:
   - semver
 
 catalogs:
-  animation:
-    motion-v: ^2.3.0
-
   build:
     vite: ^8.1.0
 
@@ -53,7 +50,6 @@ catalogs:
   ui:
     highlight.js: ^11.11.1
     naive-ui: ^2.44.1
-    vue-draggable-plus: ^0.6.1
 
   utils:
     '@ctrl/tinycolor': ^4.2.0
