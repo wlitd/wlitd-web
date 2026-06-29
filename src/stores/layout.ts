@@ -2,7 +2,7 @@ export type LayoutName = 'Default' | 'Simple' | 'Blank'
 
 export const useLayoutStore = defineStore('layout', () => {
   // 默认布局名称，对应组件名
-  const currentLayout = ref<LayoutName>('Simple')
+  const currentLayout = ref<LayoutName>('Default')
 
   function setLayout(name: LayoutName): void {
     currentLayout.value = name
