@@ -1,3 +1,4 @@
+import type { LayoutName } from '@/stores/layout'
 import { createRouter, createWebHistory } from 'vue-router'
 import { routes } from './routes'
 
@@ -12,6 +13,7 @@ declare module 'vue-router' {
     keepAlive?: boolean // 是否缓存该路由（默认为 false）
     inTab?: boolean // 是否显示在标签页中（默认为 true）
     requiresAuth?: boolean // 是否需要授权（默认为 false）
+    layout?: LayoutName // 布局组件名称
   }
 }
 

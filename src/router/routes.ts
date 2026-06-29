@@ -3,7 +3,7 @@ import type { RouteRecordRaw } from 'vue-router'
 export const routes: RouteRecordRaw[] = [
   {
     path: '/',
-    component: () => import('@/layouts/default.vue'),
+    component: () => import('@/components/layouts/LayoutHandle.vue'),
     meta: { inMenu: false },
     children: [
       {
@@ -248,6 +248,6 @@ export const routes: RouteRecordRaw[] = [
   {
     path: '/login',
     component: () => import('@/pages/login.vue'),
-    meta: { inMenu: false, inTab: false }
+    meta: { inMenu: false, inTab: false, layout: 'Blank' }
   }
 ]
