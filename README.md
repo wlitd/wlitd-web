@@ -73,14 +73,53 @@ The RouteMeta interface includes these properties:
 
 ### Layout Configuration
 
-Layouts are implemented by defining layout components in `src/layouts/` and specifying them as route components. The default layout includes header, sidebar, and footer sections.
+Layouts are implemented by defining layout components in `src/layouts/` and specifying them as route components. The project supports three built-in layouts:
+
+- **Default**: Full-featured layout with header, sidebar, and footer
+- **Simple**: Simplified layout with minimal components
+- **Blank**: Blank layout for special pages (e.g., login page)
+
+#### Dynamic Layout Switching
+
+The project supports dynamic layout switching through a Pinia store and layout handle component:
+
+1. **Layout Store** (`src/stores/layout.ts`): Manages current layout state with persistence
+   - `currentLayout`: Currently active layout name ('Default' | 'Simple' | 'Blank')
+   - `setLayout(name)`: Method to change the current layout
+   - Persisted to localStorage for user preference retention
+
+2. **Layout Handle** (`src/components/layouts/LayoutHandle.vue`): Dynamically renders the appropriate layout
+   - Creates a mapping table for layout components
+   - Determines which layout to use based on route meta or store state
+   - Routes can specify a fixed layout via `meta.layout` property
+
+**Usage Examples:**
+
+Set a fixed layout for a specific route:
+```ts
+const loginRoute = {
+  path: '/login',
+  component: () => import('@/pages/login.vue'),
+  meta: {
+    inMenu: false,
+    inTab: false,
+    layout: 'Blank'
+  }
+}
+```
+
+Dynamically switch layout in component:
+```ts
+const layoutStore = useLayoutStore()
+layoutStore.setLayout('Simple') // Switch to Simple layout
+```
 
 Layout routes can be defined with the `inMenu: false` meta property to indicate they are structural and should not appear as menu items:
 
 ```ts
 const routes = {
   path: '/',
-  component: () => import('@/layouts/default.vue'),
+  component: () => import('@/components/layouts/LayoutHandle.vue'),
   meta: { inMenu: false },
   children: [
     // Child routes
