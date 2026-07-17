@@ -7,7 +7,7 @@ trustPolicyExclude:
 
 catalogs:
   build:
-    vite: ^8.1.4
+    vite: ^8.1.5
 
   charts:
     echarts: ^6.1.0
@@ -17,8 +17,9 @@ catalogs:
     unocss: ^66.7.5
 
   frontend:
+    '@vue/devtools-api': ^8.1.5
     pinia: ^4.0.2
-    vue: ^3.5.39
+    vue: ^3.5.40
     vue-i18n: ^11.4.6
     vue-router: ^5.1.0
 
