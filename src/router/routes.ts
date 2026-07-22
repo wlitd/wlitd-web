@@ -186,6 +186,18 @@ export const routes: RouteRecordRaw[] = [
                     en: 'Float Date Picker'
                   }
                 }
+              },
+              {
+                name: 'FloatTimePicker',
+                path: 'floatTimePicker',
+                component: () => import('@/pages/components/input/floatTimePickerDemo.vue'),
+                meta: {
+                  titleKey: 'floatTimePicker',
+                  i18n: {
+                    zh: '浮标时间选择器',
+                    en: 'Float Time Picker'
+                  }
+                }
               }
             ]
           }
