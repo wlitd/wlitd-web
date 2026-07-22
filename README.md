@@ -330,6 +330,38 @@ const dateValue = ref<number | null>(1780329600000)
 </template>
 ```
 
+### FloatTimePicker
+
+A time picker component with floating label animation.
+
+**Features:**
+- Floating label that animates when focused or has value
+- Inherits all properties from Naive UI's TimePicker
+- Custom icon slot support
+- Form integration (inherits size, disabled, and validation status)
+- Multiple sizes (small, medium, large)
+- Long label truncation with ellipsis
+- Theme-aware styling
+
+**Usage:**
+```vue
+<script setup lang="ts">
+import { ref } from 'vue'
+
+const timeValue = ref<number | null>(1183135260000)
+</script>
+
+<template>
+  <FloatTimePicker v-model:value="timeValue" placeholder="Please Select Time" />
+
+  <FloatTimePicker placeholder="Custom Icon">
+    <template #icon>
+      <div class="i-mdi-clock" />
+    </template>
+  </FloatTimePicker>
+</template>
+```
+
 ### Fieldset
 
 A fieldset component with optional collapsible functionality.
@@ -485,6 +517,7 @@ src/
 │       ├── float-date-picker/
 │       ├── float-input/
 │       ├── float-input-number/
+│       ├── float-time-picker/
 │       ├── org-chart/
 │       ├── ripple-button/
 │       ├── segmented/
