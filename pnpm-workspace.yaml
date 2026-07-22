@@ -20,14 +20,14 @@ catalogs:
     '@vue/devtools-api': ^8.1.5
     pinia: ^4.0.2
     vue: ^3.5.40
-    vue-i18n: ^11.4.6
-    vue-router: ^5.1.0
+    vue-i18n: ^11.4.7
+    vue-router: ^5.2.0
 
   icons:
     '@iconify-json/flag': ^1.2.12
     '@iconify-json/icon-park-outline': ^1.2.4
     '@iconify-json/line-md': ^1.2.16
-    '@iconify-json/lucide': ^1.2.117
+    '@iconify-json/lucide': ^1.2.118
     '@iconify-json/mdi': ^1.2.3
     '@iconify-json/streamline-ultimate': ^1.2.2
 
