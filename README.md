@@ -362,6 +362,64 @@ const timeValue = ref<number | null>(1183135260000)
 </template>
 ```
 
+### FloatSelect
+
+A select component with floating label animation.
+
+**Features:**
+- Floating label that animates when focused or has value
+- Inherits all properties from Naive UI's Select
+- Custom slots support (header, action, empty, arrow)
+- Form integration (inherits size, disabled, and validation status)
+- Multiple selection support
+- Filterable option support
+- Multiple sizes (tiny, small, medium, large)
+- Long label truncation with ellipsis
+- Theme-aware styling
+
+**Usage:**
+```vue
+<script setup lang="ts">
+import type { SelectOption } from 'naive-ui'
+import { ref } from 'vue'
+
+const opts: SelectOption[] = [
+  {
+    label: 'Everybody\'s Got Something to Hide Except Me and My Monkey',
+    value: 'song0',
+    disabled: true
+  },
+  {
+    label: 'Drive My Car',
+    value: 'song1'
+  },
+  {
+    label: 'Norwegian Wood',
+    value: 'song2'
+  }
+]
+const selectValue = ref<string>('')
+</script>
+
+<template>
+  <FloatSelect v-model:value="selectValue" :options="opts" placeholder="Please Select" />
+
+  <FloatSelect placeholder="Custom Slots">
+    <template #header>
+      <NText strong>Header</NText>
+    </template>
+    <template #action>
+      <div class="flex justify-end">
+        <NButton>Action</NButton>
+      </div>
+    </template>
+    <template #empty>
+      <NText>Empty</NText>
+    </template>
+  </FloatSelect>
+</template>
+```
+
 ### Fieldset
 
 A fieldset component with optional collapsible functionality.
@@ -517,6 +575,7 @@ src/
 │       ├── float-date-picker/
 │       ├── float-input/
 │       ├── float-input-number/
+│       ├── float-select/
 │       ├── float-time-picker/
 │       ├── org-chart/
 │       ├── ripple-button/
