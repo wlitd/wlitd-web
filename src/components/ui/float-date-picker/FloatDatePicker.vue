@@ -97,18 +97,7 @@ onMounted(() => {
 })
 
 const isFocused = ref<boolean>(false)
-const shouldFloat = computed<boolean>(() => {
-  if (isFocused.value) {
-    return true
-  }
-  if (defaultValue !== undefined && defaultValue !== null) {
-    return true
-  }
-  if (value.value !== undefined && value.value !== null) {
-    return true
-  }
-  return false
-})
+const shouldFloat = computed<boolean>(() => isFocused.value || !!defaultValue || !!value.value)
 
 function handleFocus(): void {
   isFocused.value = true

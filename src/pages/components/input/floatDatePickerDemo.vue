@@ -196,9 +196,8 @@ import { ref, reactive } from 'vue'
 const size = ref<Size>('medium')
 const disabled = ref<boolean>(false)
 const formRef = ref<FormInst>()
-const formData: { startDate: number | null, endDate: number | null } = reactive({
+const formData: { startDate: number | null } = reactive({
   startDate: null,
-  endDate: null
 })
 const formRules: FormRules = {
   startDate: [
