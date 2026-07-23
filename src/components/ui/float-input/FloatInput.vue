@@ -37,7 +37,7 @@ if (pair) {
   console.error('FloatInput does not support pair for now, please use the native NInput!')
 }
 
-const value = defineModel<string>('value')
+const value = defineModel<string | null>('value')
 
 // 在 NFormItem 中使用时可以注入表单项上下文
 const formItemContext = inject<FormItemInjection | null>(formItemInjectionKey, null)
