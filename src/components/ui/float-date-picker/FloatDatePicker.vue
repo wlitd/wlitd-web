@@ -127,7 +127,7 @@ defineExpose({
       <template #date-icon>
         <slot name="date-icon" />
       </template>
-      <template #footer>
+      <template v-if="$slots.footer" #footer>
         <slot name="footer" />
       </template>
       <template #next-month>
