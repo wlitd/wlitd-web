@@ -54,7 +54,7 @@ catalogs:
 
   utils:
     '@ctrl/tinycolor': ^4.2.0
-    '@vueuse/core': ^14.3.0
+    '@vueuse/core': ^14.4.0
 
 allowBuilds:
   esbuild: true
